@@ -381,10 +381,8 @@ class _CalendarState extends State<Calendar> {
                 padding: EdgeInsets.all(0.0),
                 itemBuilder: (BuildContext context, int index) {
                   final CleanCalendarEvent event = _selectedEvents![index];
-                  final String start =
-                      DateFormat('HH:mm').format(event.startTime).toString();
-                  final String end =
-                      DateFormat('HH:mm').format(event.endTime).toString();
+                  final String start = event.startTime != null ? DateFormat('HH:mm').format(event.startTime).toString() : "";
+                  final String end = event.endTime != null ? DateFormat('HH:mm').format(event.endTime).toString() : "";
                   return Container(
                     height: 60.0,
                     child: InkWell(
