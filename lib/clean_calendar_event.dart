@@ -4,8 +4,8 @@ class CleanCalendarEvent {
   String summary;
   String description;
   String location;
-  DateTime startTime;
-  DateTime endTime;
+  DateTime? startTime;
+  DateTime? endTime;
   Color color;
   bool isAllDay;
   bool isDone;
