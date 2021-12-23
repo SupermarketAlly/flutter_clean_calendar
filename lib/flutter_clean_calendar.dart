@@ -381,8 +381,6 @@ class _CalendarState extends State<Calendar> {
                 padding: EdgeInsets.all(0.0),
                 itemBuilder: (BuildContext context, int index) {
                   final CleanCalendarEvent event = _selectedEvents![index];
-                  final String start = event.startTime != null ? DateFormat('HH:mm').format(event.startTime).toString() : "";
-                  final String end = event.endTime != null ? DateFormat('HH:mm').format(event.endTime).toString() : "";
                   return Container(
                     height: 60.0,
                     child: InkWell(
@@ -416,26 +414,6 @@ class _CalendarState extends State<Calendar> {
                                           .textTheme
                                           .subtitle2),
                                   Text(event.description)
-                                ],
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 20,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(start,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyText1),
-                                  Text(end,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyText1),
                                 ],
                               ),
                             ),
