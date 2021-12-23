@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CleanCalendarEvent {
-  String summary;
-  String description;
-  String location;
+  String name;
+  String time;
+  int id;
   Color color;
   bool isAllDay;
   bool isDone;
 
-  CleanCalendarEvent(this.summary,
-      {this.description = '',
-      this.location = '',
+  CleanCalendarEvent(this.name,
+      {this.time = '',
+      required this.id,
       this.color = Colors.blue,
       this.isAllDay = false,
       this.isDone = false});
