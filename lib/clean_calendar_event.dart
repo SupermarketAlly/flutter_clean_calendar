@@ -7,13 +7,11 @@ class CleanCalendarEvent {
   Color color;
   bool isAllDay;
   bool isDone;
-  dynamic meal;
 
   CleanCalendarEvent(this.name,
       {this.time = '',
       required this.id,
       this.color = Colors.blue,
       this.isAllDay = false,
-      this.isDone = false,
-      this.meal});
+      this.isDone = false});
 }
