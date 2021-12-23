@@ -409,11 +409,11 @@ class _CalendarState extends State<Calendar> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text(event.summary,
+                                  Text(event.name,
                                       style: Theme.of(context)
                                           .textTheme
                                           .subtitle2),
-                                  Text(event.description)
+                                  Text(event.time)
                                 ],
                               ),
                             ),
